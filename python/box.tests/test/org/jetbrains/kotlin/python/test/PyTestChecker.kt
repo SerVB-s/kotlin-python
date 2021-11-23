@@ -42,7 +42,7 @@ object PythonTestChecker {
     }
 
     private fun runPython(scriptPath: String): String {
-        val process = Runtime.getRuntime().exec("python3.8 $scriptPath")
+        val process = Runtime.getRuntime().exec("micropython $scriptPath")
         val runningTime = measureTimeMillis {
             process.waitFor(10, TimeUnit.SECONDS)
         }
